@@ -1,0 +1,8 @@
+ <label class="required" for="course" >Course:</label>
+
+    <select name="course" id="course" class="course-dropdown">
+        <option selected>--Select Courses--</option>
+            {% for course in courses %}
+                 <option value="{{course.id}}">{{course.name}}</option>
+            {% endfor %}
+    </select>

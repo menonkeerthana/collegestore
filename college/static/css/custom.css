@@ -1,0 +1,50 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/*** Nav bar ***/
+.nav-item{
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+     width: 100%;
+}
+
+.dropdown-item{
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+}
+
+.my_footer p{
+    padding-top : 20px;
+    font-size : 14px;
+}
+.my_footer{
+    background-color : #f8f9fa;
+    height : 60px;
+}
+/***Home***/
+.my_row_class{
+    padding-top : 15px;
+}
+.mx_auto{
+    color : #000;
+    font-size : 12px;
+}
+.my_image{
+    width : 100%;
+    max-height:auto;
+}
+.card-body h4{
+    font-size : 14px;
+    text-transform : uppercase;
+    letter-spacing : .2em;
+}
+.my_title{
+    font-size : 20px;
+    text-transform : uppercase;
+    letter-spacing : .2em;
+}
+
+/***New form ***/
+{}

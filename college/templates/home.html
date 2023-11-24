@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block metadescription %}
+ Welcome to our Online Store....
+{% endblock %}
+
+{% block title %}
+     Welcome to our Online Store....
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <div class="row my_row" style="padding :30px;">
+    <h1 class="text-center my_title"> Welcome to our Store....</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mx_auto">
+    {% for prod in prod %}
+        <div class="my_bottom-margin col-9 col-sm-12  col-md-4 col-lg-4"  style="padding:10px;">
+            <div class="card text-center" style="min-width: 18rem;">
+                <img class="card-img-top my_image" src ="{{ prod.img.url }}" alt="{{prod.name}}" style="max-height:250px;">
+            <div class="card-body">
+                <h4> {{ prod.name }} </h4>
+                <p> {{ prod.price }} </p>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

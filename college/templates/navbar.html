@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" >
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          Department
+            </a>
+          <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Science">Science</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science">Computer Science</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce">Commerce</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Humanities">Humanities</a></li>
+                <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Language_and_Literature">Language & Literature</a></li>
+          </ul>
+            </li>
+          <li class="nav-item">
+          <a class="nav-link " href="{% url 'store:register_user' %}">Register</a>
+        </li>
+   </ul>
+       {% if user.is_authenticated %}
+        <b> Hello {{user.username}}</b><br>
+
+        <a href="{% url 'store:logout' %}"><button class="btn btn-outline-success" type="submit" >Logout</button></a>
+      {% else %}
+        <a href="{% url 'store:login_user' %}"><button class="btn btn-outline-success" type="submit">Login</button></a>
+      {% endif %}
+    </div>
+  </div>
+</nav>
